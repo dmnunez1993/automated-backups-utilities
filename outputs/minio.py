@@ -41,6 +41,11 @@ class MinioOutput(BaseOutput):
         )
         self._fput_object(name, file_path, content_type)
 
+        self._logger.info(
+            "Finished uploading backup to Minio: %s",
+            name,
+        )
+
     def list_files(self) -> list:
         client = self._get_client()
 
@@ -55,6 +60,11 @@ class MinioOutput(BaseOutput):
             name,
         )
         client.remove_object(self._bucket_name, name)
+
+        self._logger.info(
+            "Finished removing object from Minio: %s",
+            name,
+        )
 
     def _fput_object(
         self,

@@ -40,4 +40,9 @@ class DockerInput(BaseInput):
         """
         call(command, shell=True, stdout=DEVNULL, stderr=STDOUT)
 
+        self._logger.info(
+            "Finished Backing up Docker Volume: %s",
+            self._volume_name,
+        )
+
         return os.path.join(output_folder, filename)
