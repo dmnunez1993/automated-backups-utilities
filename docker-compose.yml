@@ -13,3 +13,5 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - $CONFIG_PATH:/config.yaml
+      # TODO: Find a better way to handle this volume sharing
+      - /tmp/:/tmp/
