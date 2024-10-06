@@ -7,6 +7,9 @@ services:
     stdin_open: true
     env_file:
       .env
+    environment:
+      CONFIG_PATH: /config.yaml
     command: python3 app.py
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - $CONFIG_PATH:/config.yaml
