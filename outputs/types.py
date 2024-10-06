@@ -1,0 +1,1 @@
+MINIO_OUTPUT_TYPE = "minio"

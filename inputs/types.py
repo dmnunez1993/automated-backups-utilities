@@ -1,0 +1,2 @@
+DOCKER_INPUT_TYPE = "docker"
+POSTGRESQL_INPUT_TYPE = "postgresql"
