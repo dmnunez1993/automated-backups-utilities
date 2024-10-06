@@ -1,6 +1,6 @@
 # Automated Backup Utilities
 
-App for automating different types of data sources.
+App for automating the backup of different types of data sources.
 
 Supported Data Sources:
 
@@ -32,6 +32,10 @@ Ensure that a .env file is set up. You can use the example provided in this repo
 Additionally, it is required to set up a YAML configuration file. It is possible to use the example provided in this repository (config.yaml.sample) as a starting point, but make sure to customize it according to each backup's specific parameters:
 
     cp config.yaml.sample config.yaml
+
+To run the app:
+
+    python3 app.py
 
 ### Deployment
 
