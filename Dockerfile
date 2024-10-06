@@ -10,6 +10,6 @@ COPY requirements.txt /app/
 
 RUN pip install -r requirements.txt
 
-COPY *.py /app/
+COPY . /app/
 
-ENTRYPOINT [ "python3", "app.py" ]
+CMD [ "python3", "app.py" ]
