@@ -15,4 +15,3 @@ services:
       - $CONFIG_PATH:/config.yaml
       # TODO: Find a better way to handle this volume sharing
       - /tmp/:/tmp/
-
