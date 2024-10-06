@@ -27,3 +27,5 @@ admin/.husky/_/husky.sh
 # Env files
 .env
 
+# Config files
+*.yaml
