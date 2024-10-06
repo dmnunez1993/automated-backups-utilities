@@ -61,4 +61,9 @@ class PostgreSQLInput(BaseInput):
 
         os.remove(output_path_sql)
 
+        self._logger.info(
+            "Finished Backing up PostgreSQL database: %s",
+            self._database_name,
+        )
+
         return output_path_tar_gz
