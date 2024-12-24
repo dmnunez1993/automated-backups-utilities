@@ -4,6 +4,7 @@ App for automating the backup of different types of data sources.
 
 Supported Data Sources:
 
+- MySQL Databases
 - PostgreSQL Databases
 - Docker Volumes
 
