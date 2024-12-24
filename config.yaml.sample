@@ -17,6 +17,24 @@
         secret_key: <your_minio_secret_key>
         secure: false                   # Should be set to true if minio's server uses HTTPS
         bucket_name: <your_bucket_name>
+- name: <mysql_backup_name_here>        # Name used for the backup
+  max_backups_stored: 3                 # Max amount of backups to be stored
+  schedule: "* * * * *"                 # Crontab schedule indicating the app when to run the backup
+  type: mysql                           # Backup type
+  mysql:                           # In case postgresql is selected in type, the following fields must be completed
+    host: <database_host_or_ip>
+    port: <database_port>
+    username: <database_username>
+    password: <database_password>
+    database_name: <database_name>
+  outputs:                              # Outputs in which the backups will be stored. It is possible to list as many as needed
+    - type: minio                       # Output type
+      minio:                            # In case minio is selected in type, the following fields must be completed
+        endpoint: <minio_host>:<minio_port>
+        access_key: <your_minio_access_key>
+        secret_key: <your_minio_secret_key>
+        secure: false                   # Should be set to true if minio's server uses HTTPS
+        bucket_name: <your_bucket_name>
 - name: <docker_volume_backup_here>
   max_backups_stored: 3
   schedule: "* * * * *"
