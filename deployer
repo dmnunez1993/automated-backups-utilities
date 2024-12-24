@@ -67,11 +67,11 @@ def main():
 
     if command == 'deploy':
         print("Deploying services...")
-        run_command(f'docker-compose -p {compose_name} up -d')
+        run_command(f'docker compose -p {compose_name} up -d')
 
     if command == 'start':
         print("Starting services...")
-        run_command(f'docker-compose -p {compose_name} up')
+        run_command(f'docker compose -p {compose_name} up')
 
     if command == 'stop':
         print("Stopping services...")
@@ -80,7 +80,7 @@ def main():
     if command == 'shell':
         print("Starting up shell...")
         run_command(f'''
-            docker-compose -p {compose_name} run backup_utilities sh
+            docker compose -p {compose_name} run backup_utilities sh
         ''')
 
 
