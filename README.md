@@ -9,12 +9,13 @@ Supported Data Sources:
 
 Supported Backup Storage outputs:
 
-- MinIO
+- [MinIO](https://min.io/)
 
 ### Dependencies
 
 - [python](https://www.postgresql.org/) - Used for developing the app
 - [postgresql](https://www.postgresql.org/) - Mainly for using pg_dump to backup databases
+- [mysql](https://www.mysql.com/) - Mainly for using pg_dump to backup databases
 - [docker](https://www.docker.com/) - Used to backup docker volumes and for deployment
 
 ### Development
