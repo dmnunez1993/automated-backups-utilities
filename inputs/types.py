@@ -1,3 +1,4 @@
-DOCKER_INPUT_TYPE = "docker"
-POSTGRESQL_INPUT_TYPE = "postgresql"
-MYSQL_INPUT_TYPE = "mysql"
+INPUT_TYPE_DOCKER = "docker"
+INPUT_TYPE_POSTGRESQL = "postgresql"
+INPUT_TYPE_MYSQL = "mysql"
+INPUT_TYPE_LOCAL = "local"

@@ -38,9 +38,23 @@
 - name: <docker_volume_backup_here>
   max_backups_stored: 3
   schedule: "* * * * *"
-  type: postgresql
+  type: docker
   docker:                               # In case docker is selected in type, the following fields must be completed
     volume_name: <your_docker_volume_name>
+  outputs:                              
+    - type: minio
+      minio:
+        endpoint: <minio_host>:<minio_port>
+        access_key: <your_minio_access_key>
+        secret_key: <your_minio_secret_key>
+        secure: false
+        bucket_name: <your_bucket_name>
+- name: <local_folder_backup_here>
+  max_backups_stored: 3
+  schedule: "* * * * *"
+  type: local
+  local:                               # In case docker is selected in type, the following fields must be completed
+    path: <your_local_path>
   outputs:                              
     - type: minio
       minio:
